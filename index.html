@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>Digital Media Studio Assignment2</title>
+        
+        <style>
+            .row{
+                width:720px;
+                margin: 10px auto 10px auto ;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding:20px;
+            }
+        </style>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.2/buzz.min.js"></script>
+    </head>
+
+    <body style="background-color: whitesmoke;">
+        <div class="row">
+            <div class="image-container">
+                <img id="img1" src="img/car.png" height="200" width="200"
+                    onmouseover= "this.src='img/car_ro.png';"
+                    onmouseout= "this.src='img/car.png';"
+                />
+            </div>
+
+            <div class="image-container">
+                <img id="img2" src="img/step.png" height="200" width="200"
+                    onmouseover= "this.src='img/step_ro.png';"
+                    onmouseout= "this.src='img/step.png';"
+                />
+            </div>
+
+            <div class="image-container">
+                <img id="img3" src="img/dance.png" height="200" width="200"
+                    onmouseover= "this.src='img/dance_ro.png';"
+                    onmouseout= "this.src='img/dance.png';"
+                />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="image-container">
+                <img id="img4" src="img/spring.png" height="200" width="200"
+                    onmouseover= "this.src='img/spring_ro.png';"
+                    onmouseout= "this.src='img/spring.png';"
+                />
+            </div>
+
+            <div class="image-container">
+                <img id="img5" src="img/gravity.png" height="200" width="200"
+                    onmouseover= "this.src='img/gravity_ro.png';"
+                    onmouseout= "this.src='img/gravity.png';"
+                />
+            </div>
+
+            <div class="image-container">
+                <img id="img6" src="img/door.png" height="200" width="200"
+                    onmouseover= "this.src='img/door_ro.png';"
+                    onmouseout= "this.src='img/door.png';"
+                />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="image-container">
+                <img id="img7" src="img/wind.png" height="200" width="200"
+                    onmouseover= "this.src='img/wind_ro.png';"
+                    onmouseout= "this.src='img/wind.png';"
+                />
+            </div>
+
+            <div class="image-container">
+                <img id="img8" src="img/acc.png" height="200" width="200"
+                    onmouseover= "this.src='img/acc_ro.png';"
+                    onmouseout= "this.src='img/acc.png';"
+                />
+            </div>
+
+            <div class="image-container">
+                <img id="img9" src="img/ela.png" height="200" width="200"
+                    onmouseover= "this.src='img/ela_ro.png';"
+                    onmouseout= "this.src='img/ela.png';"
+                />
+            </div>
+        </div>
+            
+        <script>
+            let carSound = new buzz.sound("sound/car.mp3");
+            let stepSound = new buzz.sound("sound/step.mp3");
+            let danceSound = new buzz.sound("sound/dance.mp3");
+            let springSound = new buzz.sound("sound/spring.mp3");
+            let dropSound = new buzz.sound("sound/drop.mp3");
+            let doorSound = new buzz.sound("sound/door.mp3");
+            let windSound = new buzz.sound("sound/wind.mp3");
+            let accSound = new buzz.sound("sound/acc.mp3");
+            let elaSound = new buzz.sound("sound/ela.mp3");
+
+            window.onload = function() {
+                document.getElementById('img1').addEventListener('click', function () {
+                    setTimeout(()=>{carSound.play();}, 1000);
+                });  
+                document.getElementById('img2').addEventListener('click', function () {
+                    setTimeout(()=>{stepSound.play();}, 1000);
+                });
+                document.getElementById('img3').addEventListener('click', function () {
+                    setTimeout(()=>{danceSound.play();}, 1000);
+                });
+                document.getElementById('img4').addEventListener('click', function () {
+                    setTimeout(()=>{springSound.play();}, 1000);
+                });
+                document.getElementById('img5').addEventListener('click', function () {
+                    setTimeout(()=>{dropSound.play();}, 1000);
+                }); 
+                document.getElementById('img6').addEventListener('click', function () {
+                    setTimeout(()=>{doorSound.play();}, 1000);
+                }); 
+                document.getElementById('img7').addEventListener('click', function () {
+                    setTimeout(()=>{windSound.play();}, 1000);
+                }); 
+                document.getElementById('img8').addEventListener('click', function () {
+                    setTimeout(()=>{accSound.play();}, 1000);
+                }); 
+                document.getElementById('img9').addEventListener('click', function () {
+                    setTimeout(()=>{elaSound.play();}, 1000);
+                });
+            }
+        </script>   
+
+    </body>
+
+</html>
